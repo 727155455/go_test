@@ -5,10 +5,11 @@ import (
 	"fmt"
 )
 
-var a *string = flag.String("aaa","bbb","ccc")
+var a *string = flag.String("aaa", "bbb", "ccc")
+
 func main() {
-	fmt.Println(*a)
-	fmt.Printf("%+v ,,,,, %T", a, a)
+	fmt.Println(*a, a)
+	fmt.Printf("%+v ,,,,, %v\n", a, a)
 	flag.Parse()
-	fmt.Println(*a)
+	fmt.Println("----", *a, a)
 }
